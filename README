@@ -1,0 +1,310 @@
+# ❤️ Heart Disease Prediction Dashboard Using Random Forest
+
+## 📌 Deskripsi Proyek
+
+Proyek ini merupakan implementasi Machine Learning untuk memprediksi risiko penyakit jantung menggunakan algoritma Random Forest.
+
+Tujuan utama dari proyek ini adalah membantu proses deteksi dini penyakit jantung berdasarkan data kesehatan pasien. Model dibangun menggunakan dataset Heart Disease dan diimplementasikan dalam bentuk dashboard interaktif menggunakan Streamlit.
+
+---
+
+## 👨‍💻 Kelompok 2
+
+**Mata Kuliah:** Data Science
+
+**Judul Penelitian:**
+Prediksi Risiko Penyakit Jantung Menggunakan Algoritma Random Forest
+
+---
+
+## 🎯 Tujuan Penelitian
+
+Penelitian ini bertujuan untuk:
+
+- Menganalisis data kesehatan pasien.
+- Membangun model prediksi penyakit jantung menggunakan Random Forest.
+- Mengevaluasi performa model menggunakan metrik Accuracy.
+- Menyediakan dashboard interaktif untuk melakukan prediksi secara real-time.
+
+---
+
+## 📊 Dataset
+
+Dataset yang digunakan adalah Heart Disease Dataset.
+
+### Jumlah Data
+
+- Total Data : 1025 baris
+- Total Fitur : 13
+- Total Target : 1
+
+### Fitur Dataset
+
+| Kolom    | Deskripsi                    |
+| -------- | ---------------------------- |
+| age      | Usia pasien                  |
+| sex      | Jenis kelamin                |
+| cp       | Tipe nyeri dada              |
+| trestbps | Tekanan darah saat istirahat |
+| chol     | Kadar kolesterol             |
+| fbs      | Gula darah puasa             |
+| restecg  | Hasil elektrokardiogram      |
+| thalach  | Detak jantung maksimum       |
+| exang    | Angina akibat olahraga       |
+| oldpeak  | Depresi ST                   |
+| slope    | Kemiringan segmen ST         |
+| ca       | Jumlah pembuluh darah utama  |
+| thal     | Kondisi thalassemia          |
+| target   | Status penyakit jantung      |
+
+### Target
+
+| Nilai | Keterangan                      |
+| ----- | ------------------------------- |
+| 0     | Tidak memiliki penyakit jantung |
+| 1     | Memiliki penyakit jantung       |
+
+---
+
+## 🤖 Algoritma Yang Digunakan
+
+### Random Forest
+
+Random Forest merupakan algoritma Machine Learning yang terdiri dari kumpulan Decision Tree.
+
+Cara kerja Random Forest:
+
+1. Membuat banyak Decision Tree.
+2. Setiap Tree melakukan prediksi.
+3. Hasil akhir ditentukan berdasarkan voting mayoritas.
+
+### Kelebihan Random Forest
+
+- Akurasi tinggi
+- Mengurangi overfitting
+- Cocok untuk klasifikasi
+- Dapat mengetahui feature importance
+- Stabil terhadap data baru
+
+---
+
+## 🔬 Tahapan Penelitian
+
+```text
+Dataset Heart Disease
+        ↓
+Import Data
+        ↓
+Eksplorasi Data
+        ↓
+Pembersihan Data
+        ↓
+Visualisasi Data
+        ↓
+Split Data (80:20)
+        ↓
+Random Forest
+        ↓
+Training Model
+        ↓
+Prediksi
+        ↓
+Evaluasi Model
+        ↓
+Dashboard Streamlit
+```
+
+---
+
+## 📈 Hasil Model
+
+Model Random Forest dibangun menggunakan:
+
+```python
+RandomForestClassifier(
+    n_estimators=100,
+    random_state=42
+)
+```
+
+### Hasil Evaluasi
+
+```text
+Accuracy : 98.54%
+```
+
+Interpretasi:
+
+Model mampu memprediksi risiko penyakit jantung dengan tingkat akurasi sebesar 98.54%.
+
+---
+
+## 🛠️ Teknologi Yang Digunakan
+
+- Python 3.13
+- Pandas
+- NumPy
+- Matplotlib
+- Seaborn
+- Scikit-Learn
+- Joblib
+- Streamlit
+
+---
+
+## 📂 Struktur Project
+
+```text
+HeartDisease_Project/
+│
+├── app.py
+├── train_model.py
+├── requirements.txt
+│
+├── data/
+│   └── heart.csv
+│
+├── model/
+│   └── random_forest.pkl
+│
+└── README.md
+```
+
+---
+
+## 🚀 Cara Menjalankan Project
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/username/heart-disease-prediction-random-forest.git
+```
+
+Masuk ke folder project:
+
+```bash
+cd heart-disease-prediction-random-forest
+```
+
+---
+
+### 2. Buat Virtual Environment
+
+```bash
+python3 -m venv venv
+```
+
+Aktifkan:
+
+Mac/Linux
+
+```bash
+source venv/bin/activate
+```
+
+Windows
+
+```bash
+venv\Scripts\activate
+```
+
+---
+
+### 3. Install Dependency
+
+```bash
+pip install -r requirements.txt
+```
+
+Atau:
+
+```bash
+pip install streamlit pandas numpy matplotlib seaborn scikit-learn joblib
+```
+
+---
+
+### 4. Training Model
+
+```bash
+python train_model.py
+```
+
+Output:
+
+```text
+Akurasi Model : 98.54%
+Model berhasil disimpan!
+```
+
+---
+
+### 5. Menjalankan Dashboard
+
+```bash
+streamlit run app.py
+```
+
+atau
+
+```bash
+python -m streamlit run app.py
+```
+
+Dashboard akan berjalan pada:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## 📊 Fitur Dashboard
+
+- Input data pasien
+- Prediksi penyakit jantung
+- Visualisasi dataset
+- Heatmap korelasi
+- Tampilan data pasien
+- Dashboard interaktif berbasis Streamlit
+
+---
+
+## 📷 Tampilan Dashboard
+
+Tambahkan screenshot dashboard pada folder:
+
+```text
+screenshots/
+```
+
+Contoh:
+
+```markdown
+![Dashboard](screenshots/dashboard.png)
+```
+
+---
+
+## 📚 Referensi
+
+- Scikit-Learn Documentation
+- Streamlit Documentation
+- Heart Disease Dataset
+- Machine Learning with Python
+
+---
+
+## 📝 Kesimpulan
+
+Berdasarkan hasil penelitian, algoritma Random Forest berhasil digunakan untuk memprediksi risiko penyakit jantung dengan tingkat akurasi sebesar 98.54%.
+
+Faktor yang paling berpengaruh terhadap prediksi penyakit jantung adalah:
+
+- Chest Pain (cp)
+- CA
+- Thalach
+- Oldpeak
+- Thal
+
+Sehingga Random Forest dapat menjadi metode yang efektif dalam membantu deteksi dini risiko penyakit jantung.
